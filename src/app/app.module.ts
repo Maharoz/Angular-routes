@@ -9,9 +9,17 @@ import { UsersComponent } from './users/users.component';
 import { ServersComponent } from './servers/servers.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
 
 
 import { AppComponent } from './app.component';
+
+
+const appRoutes : Routes = [ 
+  { path : '' , component : HomeComponent} ,
+  { path : 'users' , component : UserComponent} ,
+  { path : 'servers' , component : ServersComponent} 
+];
 
 
 @NgModule({
@@ -27,7 +35,8 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [ServersService],
   bootstrap: [AppComponent]
