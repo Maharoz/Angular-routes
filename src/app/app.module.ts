@@ -18,6 +18,7 @@ import { AppComponent } from './app.component';
 const appRoutes : Routes = [ 
   { path : '' , component : HomeComponent} ,
   { path : 'users' , component : UserComponent} ,
+  { path : 'users/:id' , component : UserComponent} ,
   { path : 'servers' , component : ServersComponent} 
 ];
 
