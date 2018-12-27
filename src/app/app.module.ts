@@ -1,3 +1,5 @@
+import { AuthGaurd } from './auth-gaurd.service';
+import { AuthService } from './auth.service';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
@@ -35,7 +37,8 @@ import { AppRoutingModule } from './app-routing.module';
     AppRoutingModule
    
   ],
-  providers: [ServersService],
+  providers: [ServersService,
+  AuthService,AuthGaurd],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
