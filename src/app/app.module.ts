@@ -13,6 +13,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 
 import { AppComponent } from './app.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 const appRoutes : Routes = [ 
@@ -23,7 +24,9 @@ const appRoutes : Routes = [
   { path : 'servers' , component : ServersComponent, children:[
     { path : ':id' , component : ServerComponent} ,
     { path : ':id/edit', component : EditServerComponent}
-  ]}
+  ]},
+  {path : 'not-found', component: PageNotFoundComponent},
+  {path : '**', redirectTo: '/not-found'}
   
 ];
 
@@ -36,7 +39,8 @@ const appRoutes : Routes = [
     ServersComponent,
     UserComponent,
     EditServerComponent,
-    ServerComponent
+    ServerComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
