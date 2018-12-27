@@ -1,3 +1,4 @@
+import { CanDeactivateGaurd } from './servers/edit-server/can-deactivate-gaurd.service';
 import { AuthGaurd } from './auth-gaurd.service';
 import { AuthService } from './auth.service';
 import { NgModule } from '@angular/core';
@@ -38,7 +39,7 @@ import { AppRoutingModule } from './app-routing.module';
    
   ],
   providers: [ServersService,
-  AuthService,AuthGaurd],
+  AuthService,AuthGaurd,CanDeactivateGaurd],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
