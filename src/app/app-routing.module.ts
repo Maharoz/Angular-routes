@@ -1,3 +1,4 @@
+import { ErrorPageComponent } from './error-page/error-page.component';
 import { CanDeactivateGaurd } from './servers/edit-server/can-deactivate-gaurd.service';
 import { AuthGaurd } from './auth-gaurd.service';
 import { NgModule } from '@angular/core';
@@ -25,7 +26,8 @@ const appRoutes : Routes = [
       component : ServerComponent} ,
       { path : ':id/edit', component : EditServerComponent,canDeactivate : [CanDeactivateGaurd]}
     ]},
-    {path : 'not-found', component: PageNotFoundComponent},
+    //{path : 'not-found', component: PageNotFoundComponent},
+    {path : 'not-found', component: ErrorPageComponent, data:{message : 'page not found'}},
     {path : '**', redirectTo: '/not-found'}
     
   ];

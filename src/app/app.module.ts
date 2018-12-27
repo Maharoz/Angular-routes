@@ -18,6 +18,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 import { AppRoutingModule } from './app-routing.module';
+import { ErrorPageComponent } from './error-page/error-page.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { AppRoutingModule } from './app-routing.module';
     UserComponent,
     EditServerComponent,
     ServerComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ErrorPageComponent
   ],
   imports: [
     BrowserModule,
