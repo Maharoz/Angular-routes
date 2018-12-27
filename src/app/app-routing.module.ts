@@ -15,8 +15,15 @@ const appRoutes : Routes = [
     { path : 'users' , component : UsersComponent, children:[
       { path : ':id/:name' , component : UserComponent}
     ]} ,
-    { path : 'servers' ,canActivate : [AuthGaurd], component : ServersComponent, children:[
-      { path : ':id' , component : ServerComponent} ,
+    { path : 'servers' , 
+    component : ServersComponent, 
+    canActivateChild : [
+        AuthGaurd
+    ], children:[
+      { path : ':id' ,
+    // canActivate : [AuthGaurd] ,
+   
+      component : ServerComponent} ,
       { path : ':id/edit', component : EditServerComponent}
     ]},
     {path : 'not-found', component: PageNotFoundComponent},
