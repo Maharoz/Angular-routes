@@ -1,3 +1,4 @@
+import { ServerResolver } from './servers/server/server-resolver.service';
 import { CanDeactivateGaurd } from './servers/edit-server/can-deactivate-gaurd.service';
 import { AuthGaurd } from './auth-gaurd.service';
 import { AuthService } from './auth.service';
@@ -41,7 +42,7 @@ import { ErrorPageComponent } from './error-page/error-page.component';
    
   ],
   providers: [ServersService,
-  AuthService,AuthGaurd,CanDeactivateGaurd],
+  AuthService,AuthGaurd,CanDeactivateGaurd,ServerResolver],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

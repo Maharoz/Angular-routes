@@ -1,3 +1,4 @@
+import { ServerResolver } from './servers/server/server-resolver.service';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { CanDeactivateGaurd } from './servers/edit-server/can-deactivate-gaurd.service';
 import { AuthGaurd } from './auth-gaurd.service';
@@ -23,7 +24,8 @@ const appRoutes : Routes = [
       { path : ':id' ,
     // canActivate : [AuthGaurd] ,
    
-      component : ServerComponent} ,
+      component : ServerComponent,
+    resolve : {server : ServerResolver}} ,
       { path : ':id/edit', component : EditServerComponent,canDeactivate : [CanDeactivateGaurd]}
     ]},
     //{path : 'not-found', component: PageNotFoundComponent},
